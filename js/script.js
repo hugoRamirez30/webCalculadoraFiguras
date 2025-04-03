@@ -39,7 +39,7 @@ function createInputFields() {
                     <input type="number" id="base" step="any" required>
                 </div>
                 <div class="input-group">
-                    <label>Altura (h):</label>
+                    <label>Altura (a):</label>
                     <input type="number" id="altura" step="any" required>
                 </div>`;
             break;
@@ -75,11 +75,11 @@ function createInputFields() {
                         <img src="img/rectangle.png" alt="Rectangulo">
                     </div>
                 <div class="input-group">
-                    <label>Longitud (l):</label>
+                    <label>Largo (a):</label>
                     <input type="number" id="longitud" step="any" required>
                 </div>
                 <div class="input-group">
-                    <label>Ancho (w):</label>
+                    <label>Ancho (b):</label>
                     <input type="number" id="ancho" step="any" required>
                 </div>`;
             break;
@@ -143,9 +143,9 @@ function calculate() {
                 perimetro = baseR + alturaR + hipotenusa;
 
                 procedureText = `
-                    1. Calculamos la hipotenusa: √(b² + h²) = ${formatNumber(hipotenusa)}<br>
-                    2. El área es: (b * h) / 2 = ${formatNumber(area)}<br>
-                    3. El perímetro es: b + h + hipotenusa = ${formatNumber(perimetro)}
+                    1. Calculamos la hipotenusa: √(b² + a²) = ${formatNumber(hipotenusa)}<br>
+                    2. El área es: (b * a) / 2 = ${formatNumber(area)}<br>
+                    3. El perímetro es: b + a + hipotenusa = ${formatNumber(perimetro)}
                 `;
                 break;
 
@@ -184,8 +184,8 @@ function calculate() {
                 perimetro = 2 * (longitud + ancho);
 
                 procedureText = `
-                    1. El área es: l * w = ${formatNumber(area)}<br>
-                    2. El perímetro es: 2 * (l + w) = ${formatNumber(perimetro)}
+                    1. El área es: a * b = ${formatNumber(area)}<br>
+                    2. El perímetro es: 2 * (a + b) = ${formatNumber(perimetro)}
                 `;
                 break;
 
