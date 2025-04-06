@@ -102,7 +102,7 @@ function createInputFields() {
             break;
     }
 
-    // Añadir evento de escucha para evitar caracteres no deseados
+    
     const inputs = container.querySelectorAll('input[type="number"]');
     inputs.forEach(input => {
         input.addEventListener('keydown', function(e) {
