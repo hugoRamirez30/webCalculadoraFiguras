@@ -182,19 +182,21 @@ function calculate() {
                 `;
                 break;
 
-            case 'rectangulo':
-                const longitud = parseFloat(document.getElementById('longitud').value);
-                const ancho = parseFloat(document.getElementById('ancho').value);
-                if (longitud <= 0 || ancho <= 0) throw new Error('Valores deben ser positivos');
+           case 'rectangulo':
+    const longitud = parseFloat(document.getElementById('longitud').value);
+    const ancho = parseFloat(document.getElementById('ancho').value);
 
-                area = longitud * ancho;
-                perimetro = 2 * (longitud + ancho);
+    if (longitud <= 0 || ancho <= 0) throw new Error('Los valores deben ser positivos');
+    if (longitud === ancho) throw new Error('Los lados no pueden ser iguales.');
 
-                procedureText = `
-                    1. El área es: a * b = ${formatNumber(area)}<br>
-                    2. El perímetro es: 2 * (a + b) = ${formatNumber(perimetro)}
-                `;
-                break;
+    area = longitud * ancho;
+    perimetro = 2 * (longitud + ancho);
+
+    procedureText = `
+        1. El área es: a * b = ${formatNumber(area)}<br>
+        2. El perímetro es: 2 * (a + b) = ${formatNumber(perimetro)}
+    `;
+    break;
 
             case 'rombo':
                 const d1 = parseFloat(document.getElementById('d1').value);
